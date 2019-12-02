@@ -43,7 +43,7 @@ public class PartidaDeXadrez {
 	
 	private Peca fazerMover(Posicao origem, Posicao destino) {
 		Peca p = tabuleiro.removePeca(origem);
-		Peca capturaDePeca =tabuleiro.removePeca(destino);
+		Peca capturaDePeca = tabuleiro.removePeca(destino);
 		tabuleiro.colocarPeca(p, destino);  
 		return capturaDePeca;
 		

@@ -8,7 +8,7 @@ public class Tabuleiro {
 	
 	public Tabuleiro(int linhas, int colunas) {
 		if (linhas < 1 || colunas < 1) {
-			throw new TabuleiroException("É necessário que acha 1 linha e 1 coluna !!");
+			throw new TabuleiroException("E necessario que acha 1 linha e 1 coluna !!");
 		}
 		this.linhas = linhas;
 		this.colunas = colunas;
@@ -26,7 +26,7 @@ public class Tabuleiro {
 
 	public Peca peca(int linha, int coluna) {
 		if (!posicaoExiste(linha, coluna)) {
-			throw new TabuleiroException("Posição inexistente no Tabuleiro !!");
+			throw new TabuleiroException("Posicao inexistente no Tabuleiro !!");
 		}
 		return pecas[linha][coluna];
 	}
@@ -41,7 +41,7 @@ public class Tabuleiro {
 	
 	public void colocarPeca(Peca peca, Posicao posicao) {
 		if (temPeca(posicao)) {
-			throw new TabuleiroException("Já existe uma peça na posição " + posicao);
+			throw new TabuleiroException("Ja existe uma peca na posicao " + posicao);
 	}
 		pecas[posicao.getLinha()][posicao.getColuna()] = peca;
 		peca.posicao = posicao;
@@ -49,7 +49,7 @@ public class Tabuleiro {
 	
 	public Peca removePeca(Posicao posicao) {
 		if (!posicaoExiste(posicao)) {
-			throw new TabuleiroException("Posição inexistente no Tabuleiro !!");
+			throw new TabuleiroException("Posicao inexistente no Tabuleiro !!");
 		}
 		if (peca(posicao) == null) {
 			return null;
@@ -70,7 +70,7 @@ public class Tabuleiro {
 	
 	public boolean temPeca (Posicao posicao) {
 		if (!posicaoExiste(posicao)) {
-			throw new TabuleiroException("Posição nula !");
+			throw new TabuleiroException("Posicao nula !");
 			
 		}
 		return peca(posicao) != null;
