@@ -37,7 +37,9 @@ public class PartidaDeXadrez {
 	private void validatePosicaoOrigem(Posicao posicao) {
 		if (!tabuleiro.temPeca(posicao)) {
 			throw new XadrezException("Nao existe peca na posicao de origem!!");
-			
+		}
+		if (!tabuleiro.peca(posicao).algumMovimPossível()) {
+			throw new XadrezException("Nao existe movimentos para peca escolhida !");
 		}
 	}
 	

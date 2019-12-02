@@ -3,7 +3,7 @@ package secao16Xadrez;
 import secao16TabuleiroJogo.Peca;
 import secao16TabuleiroJogo.Tabuleiro;
 
-public class PecaXadrez extends Peca{
+public abstract class PecaXadrez extends Peca{
 
 	private Color color;
 

@@ -16,5 +16,11 @@ public class Rei extends PecaXadrez{
 		return "R";
 	}
 
+	@Override
+	public boolean[][] movimentoPossiveis() {
+		boolean[][] mat = new boolean[getTabuleiro().getLinhas()][getTabuleiro().getColunas()];
+		return mat;
+	}
+
 	
 }
