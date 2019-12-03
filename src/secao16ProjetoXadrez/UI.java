@@ -3,7 +3,10 @@ package secao16ProjetoXadrez;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import javax.sound.midi.Patch;
+
 import secao16Xadrez.Color;
+import secao16Xadrez.PartidaDeXadrez;
 import secao16Xadrez.PecaXadrez;
 import secao16Xadrez.PosicaoXadrez;
 
@@ -49,6 +52,13 @@ public class UI {
 		}
 
 	}
+	
+	public static void printPartida(PartidaDeXadrez partidaDeXadrez) {
+		printTabuleiro(partidaDeXadrez.getPecas());
+		System.out.println();
+		System.out.println("Turno: " + partidaDeXadrez.getTurno());
+		System.out.println("Esperando o jogador jogar: " + partidaDeXadrez.getJogadorAtual());
+	}
 
 	public static void printTabuleiro(PecaXadrez[][] pecas) {
 		System.out.println("------------------");
@@ -62,6 +72,8 @@ public class UI {
 		System.out.println("------------------");
 		System.out.println("   a b c d e f g h");
 	}
+	
+	// Colorindo os movimentos possiveis 
 	
 	public static void printTabuleiro(PecaXadrez[][] pecas, boolean[][] podemMover) {
 		System.out.println("------------------");
