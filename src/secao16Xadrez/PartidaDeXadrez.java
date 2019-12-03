@@ -26,6 +26,12 @@ public class PartidaDeXadrez {
 		return mat;
 	}
 
+	public boolean[][] podemMover(PosicaoXadrez posicaoOrigem){
+		Posicao	posicao = posicaoOrigem.toPosicao();
+		validatePosicaoOrigem(posicao);
+		return tabuleiro.peca(posicao).movimentoPossiveis();
+	}
+
 	public PecaXadrez desempMovimentoXadrez(PosicaoXadrez posicaoOrigem, PosicaoXadrez posicaoDestino) {
 		Posicao origem = posicaoOrigem.toPosicao();
 		Posicao destino = posicaoDestino.toPosicao();
@@ -45,7 +51,7 @@ public class PartidaDeXadrez {
 	}
 
 	private void validatePosicaoDestino(Posicao origem, Posicao destino) {
-		if (!tabuleiro.peca(origem).podeMover(destino)){
+		if (!tabuleiro.peca(origem).podeMover(destino)) {
 			throw new XadrezException("A peca escolhida nao pode ser movida para possicao de destino!");
 		}
 	}
