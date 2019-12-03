@@ -20,7 +20,7 @@ public abstract class Peca {
 		return movimentoPossiveis()[posicao.getLinha()][posicao.getColuna()];	
 	}
 	
-	public boolean algumMovimPossível() {
+	public boolean algumMovimPossivel() {
 		boolean [][] mat = movimentoPossiveis();
 		for (int i = 0; i < mat.length; i++) {
 			for (int j = 0; j < mat.length; j++) {
