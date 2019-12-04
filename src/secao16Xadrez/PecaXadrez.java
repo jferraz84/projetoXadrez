@@ -22,5 +22,8 @@ public abstract class PecaXadrez extends Peca{
 		return color;
 	}
 	
-
+	public PosicaoXadrez getPosicaoXadrez() {
+		return PosicaoXadrez.fromPosicao(posicao);
+		
+	}
 }
