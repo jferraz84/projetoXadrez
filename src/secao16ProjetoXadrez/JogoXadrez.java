@@ -40,6 +40,12 @@ public class JogoXadrez {
 					capturada.add(capturaDePeca);
 				}
 				
+				if (partidadeXadrez.getPromocao() != null) {
+					System.out.print(" Digite a peca para pormocao (B/C/T/Q): ");
+					String type = sc.nextLine();
+					partidadeXadrez.trocaPecaPromovida(type);
+				}
+				
 			} catch (XadrezException e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
