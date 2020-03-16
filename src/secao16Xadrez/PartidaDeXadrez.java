@@ -1,12 +1,10 @@
 package secao16Xadrez;
 
-import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.sound.sampled.Port;
 
 import secao16TabuleiroJogo.Peca;
 import secao16TabuleiroJogo.Posicao;
